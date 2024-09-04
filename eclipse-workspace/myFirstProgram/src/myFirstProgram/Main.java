@@ -1,24 +1,15 @@
 package myFirstProgram;
-import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
 
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
+		Random random = new Random();
 		
-		System.out.print("a: ");
-		Double a = scanner.nextDouble();
+//		int x = random.nextInt(6) + 10;
+		double x = random.nextInt(6) + 10;
 		
-		System.out.println();
-		
-		System.out.print("b: ");
-		Double b = scanner.nextDouble();
-		
-		System.out.println("\n");
-		
-		Double c;
-		c = Math.sqrt(a*a + b*b);
-		System.out.println("c: " + c);
+		System.out.println(x);
 	}
 
 }
