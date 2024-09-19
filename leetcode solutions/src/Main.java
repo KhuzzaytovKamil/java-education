@@ -4,8 +4,7 @@ public class Main
 {
     public static void main(String[] args)
     {
-        Scanner scanner = new Scanner(System.in);
-        int inputInt = scanner.nextInt();
-        isPalindrome isPalindrome = new isPalindrome(inputInt);
+        int[] intput = {1,1,1,3,3,4,3,2,4,2};
+         problem = new containsDuplicate(intput);
     }
 }
