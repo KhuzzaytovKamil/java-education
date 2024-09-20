@@ -10,7 +10,7 @@ public class findMaxAverage {
 
         for (int i = k; i < nums.length; i++) {
             curSum += nums[i];
-            curSum -= nums[i - 4];
+            curSum -= nums[i - k];
 
             minSum = Math.max(minSum, curSum);
         }
