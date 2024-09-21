@@ -3,10 +3,12 @@ public class moveZeroes {
         int firstPointPosition = 0;
         int secondPointPosition = 0;
         int temporaryKeeper;
-//        System.out.print(firstPointPosition + " ");
-//        printNums(nums);
 
-        while (firstPointPosition < nums.length - 2) {
+        while (firstPointPosition < nums.length - 1) {
+            if (secondPointPosition < firstPointPosition) {
+                secondPointPosition = firstPointPosition;
+            }
+
             if (nums[firstPointPosition] == 0) {
                 while (nums[secondPointPosition] == 0 && secondPointPosition < nums.length - 1) {
                     secondPointPosition ++;
@@ -20,8 +22,6 @@ public class moveZeroes {
             else {
                 firstPointPosition ++;
             }
-//            System.out.print(firstPointPosition + " ");
-//            printNums(nums);
         }
 
         printNums(nums);
