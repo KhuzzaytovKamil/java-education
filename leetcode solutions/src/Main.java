@@ -4,7 +4,7 @@ public class Main
 {
     public static void main(String[] args)
     {
-        int intput = 16;
-        isPerfectSquare problem = new isPerfectSquare(intput);
+        int intput = 38;
+        addDigits problem = new addDigits(intput);
     }
 }
