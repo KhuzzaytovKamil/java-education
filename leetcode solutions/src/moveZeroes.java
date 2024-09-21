@@ -1,19 +1,42 @@
 public class moveZeroes {
     moveZeroes(int[] nums) {
-        int[] newNum = new int[nums.length];
-        int currentArraySize = 0;
+        int firstPointPosition = 0;
+        int secondPointPosition = 0;
+        int temporaryKeeper;
+//        System.out.print(firstPointPosition + " ");
+//        printNums(nums);
 
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] != 0) {
-                newNum[currentArraySize] = nums[i];
-                currentArraySize += 1;
+        while (firstPointPosition != nums.length - 2) {
+            if (nums[firstPointPosition] == 0) {
+                while (nums[secondPointPosition] == 0 && secondPointPosition != nums.length - 1) {
+                    secondPointPosition ++;
+                }
+
+                temporaryKeeper = nums[firstPointPosition];
+                nums[firstPointPosition] = nums[secondPointPosition];
+                nums[secondPointPosition] = temporaryKeeper;
+                firstPointPosition ++;
             }
+            else {
+                firstPointPosition ++;
+            }
+//            System.out.print(firstPointPosition + " ");
+//            printNums(nums);
         }
 
-        nums = newNum;
+        printNums(nums);
+    }
 
+    private void printNums(int[] nums) {
         System.out.print("[");
-        
-        System.out.print("]");
+        for (int i = 0; i < nums.length; i++) {
+            if (i != nums.length - 1) {
+                System.out.print(nums[i] + ", ");
+            }
+            else {
+                System.out.print(nums[i]);
+            }
+        }
+        System.out.println("]");
     }
 }
