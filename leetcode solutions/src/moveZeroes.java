@@ -6,9 +6,9 @@ public class moveZeroes {
 //        System.out.print(firstPointPosition + " ");
 //        printNums(nums);
 
-        while (firstPointPosition != nums.length - 2) {
+        while (firstPointPosition < nums.length - 2) {
             if (nums[firstPointPosition] == 0) {
-                while (nums[secondPointPosition] == 0 && secondPointPosition != nums.length - 1) {
+                while (nums[secondPointPosition] == 0 && secondPointPosition < nums.length - 1) {
                     secondPointPosition ++;
                 }
 
