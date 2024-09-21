@@ -4,7 +4,7 @@ public class Main
 {
     public static void main(String[] args)
     {
-        int intput = 38;
-        addDigits problem = new addDigits(intput);
+        String intput = "PPALLL";
+        checkRecord problem = new checkRecord(intput);
     }
 }
